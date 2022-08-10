@@ -5,7 +5,7 @@ The interview must not exceed 20 minutes.
 
 It presents a polish calculator that must be implemented in a TDD manner.
 
-Prérequisite:
+Prerequisite:
 
 * You must have an IDE installed (VSCode or PyCharm)
 * Clone this repository, and create a new branch named after the applicant name.

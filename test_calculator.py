@@ -1,71 +1,70 @@
 import unittest
 
 
-
 def polish_eval(expression: str) -> float:
-    return 0
+    pass
 
 
 class TestPolish(unittest.TestCase):
 
     def test_addition(self):
-        # assert polish_eval('2 2 +') == 4
+        # assert polish_eval('2 2 +') == 2 + 2
         pass
 
-    def test_addition_2(self):
-        # assert polish_eval('2 5 +') == 7
+    def test_addition_larger_number(self):
+        # assert polish_eval('12 34 +') == 12 + 34
         pass
 
-    def test_addition_2_fail(self):
-        # assert polish_eval('2 5 +') != 6
+    def test_multiple_additions_at_the_end(self):
+        # assert polish_eval('2 2 1 + +') == 2 + 2 + 1
         pass
 
-    def test_deux_additions(self):
-        # assert polish_eval('2 2 1 + +') == 5
+    def test_multiple_additions_as_we_go(self):
+        # assert polish_eval('2 2 + 1 +') == 2 + 2 + 1
         pass
 
-    def test_encore_deux_additions(self):
-        # assert polish_eval('2 2 + 1 +') == 5
+    def test_substraction(self):
+        # assert polish_eval('3 2 -') == 3 - 2
         pass
 
-    def test_soustraction(self):
-        # assert polish_eval('3 2 -') == 1
+    def test_substraction_negative_result(self):
+        # assert polish_eval('2 3 -') == 2 - 3
         pass
 
     def test_multiplication(self):
-        # assert polish_eval('3 2 *') == 6
+        # assert polish_eval('3 2 *') == 3 * 2
         pass
 
     def test_division(self):
-        # assert polish_eval('6 2 /') == 3
+        # assert polish_eval('6 2 /') == 6 / 2
         pass
 
-    def test_autre_soustraction(self):
-        # assert polish_eval('4 2 -') == 2
+    def test_division_float(self):
+        # assert polish_eval('2 6 /') == 2 / 6
         pass
 
-    def test_autre_addition(self):
-        # assert polish_eval('3 2 +') == 5
+    def test_multiple_spaces(self):
+        # assert polish_eval('1  2    +') == 1 + 2
         pass
 
-    def test_addition_avec_espaces(self):
-        # assert polish_eval('1  2    +') == 3
+    def test_tabulation_as_separator(self):
+        # assert polish_eval('1\t2\t+') == 1 + 2
         pass
 
-    def test_addition_avec_negatif(self):
-        # assert polish_eval('-4 5 +') == 1
+    def test_negative_number(self):
+        # assert polish_eval('-4 5 *') == -4 * 5
         pass
 
-    def test_addition_et_soustraction(self):
-        # assert polish_eval('3 2 1 - +') == 4
+    def test_add_and_sub(self):
+        # assert polish_eval('3 2 1 - +') == 3 + (2 - 1)
         pass
 
-    def test_acceptance(self):
-        # assert polish_eval('4 2 5 * + 1 3 2 * + /') == 2
+    def test_complex_1(self):
+        # assert polish_eval('4 2 5 * + 1 3 2 * + /') == (4 + (2 * 5)) / (1 + (3 * 2))
         pass
 
-    def test_acceptance2(self):
-        # assert polish_eval('5 1 2 + 4 * 3 - +') == 14
+    def test_complex_2(self):
+        # assert polish_eval('5 1 2 + 4 * 3 - +') == 5 + (((1 + 2) * 4) - 3)
         pass
 
 
