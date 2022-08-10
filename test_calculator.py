@@ -23,11 +23,11 @@ class TestPolish(unittest.TestCase):
         # assert polish_eval('2 2 + 1 +') == 2 + 2 + 1
         pass
 
-    def test_substraction(self):
+    def test_subtraction(self):
         # assert polish_eval('3 2 -') == 3 - 2
         pass
 
-    def test_substraction_negative_result(self):
+    def test_subtraction_negative_result(self):
         # assert polish_eval('2 3 -') == 2 - 3
         pass
 
